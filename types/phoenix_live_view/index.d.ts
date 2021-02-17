@@ -3,6 +3,11 @@
 // Definitions by: Peter Zingg <https://github.com/pzingg>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
+
+// Version 0.15.4 added options and interfaces for LiveView uploads
+// See: https://hexdocs.pm/phoenix_live_view/uploads.html
+
+
 import { Socket, SocketConnectOption } from 'phoenix';
 
 export interface Defaults {
