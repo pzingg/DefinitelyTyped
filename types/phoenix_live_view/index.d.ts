@@ -1,12 +1,10 @@
-// Type definitions for phoenix_live_view 0.15.4
+// Type definitions for phoenix_live_view 0.15
 // Project: https://github.com/phoenixframework/phoenix_live_view
 // Definitions by: Peter Zingg <https://github.com/pzingg>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-
 // Version 0.15.4 added options and interfaces for LiveView uploads
 // See: https://hexdocs.pm/phoenix_live_view/uploads.html
-
 
 import { Socket, SocketConnectOption } from 'phoenix';
 
@@ -238,24 +236,24 @@ export class View {
 }
 
 export interface UploadEntryInterface {
-  fileEl: HTMLInputElement
-  file: File
-  view: View
-  meta: object | null
-  metadata: () => object | null
-  progress: (progress: number) => void
-  cancel: () => void
-  isDone: () => boolean
-  error: (reason: string) => void
+  fileEl: HTMLInputElement;
+  file: File;
+  view: View;
+  meta: object | null;
+  metadata: () => object | null;
+  progress: (progress: number) => void;
+  cancel: () => void;
+  isDone: () => boolean;
+  error: (reason: string) => void;
 }
 
 export interface LiveViewUploaderMeta {
-  path: string
-  ref: string
-  name: string
-  type: string
-  size: number
-  last_modified?: number
+  path: string;
+  ref: string;
+  name: string;
+  type: string;
+  size: number;
+  last_modified?: number;
 }
 
 export function debug(view: View, kind: string, msg: object, obj: object): void;
@@ -286,7 +284,7 @@ export namespace DOM {
   function deletePrivate(el: HTMLElement, key: string): void;
   function discardError(container: Node, el: HTMLElement, phxFeedbackFor: string): void;
   function dispatchEvent(target: Node, eventString: string, detail?: object): void;
-  function filterWithinSameLiveView(nodes: Array<Node>, parent: any): any;
+  function filterWithinSameLiveView(nodes: Node[], parent: any): any;
   function findComponentNode(node: Node, cid: number): HTMLElement[];
   function findParentCIDs(node: Node, cids: number[]): Set<number>;
   function findPhxChildren(el: HTMLElement, parentId: string): HTMLElement[];
